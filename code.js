@@ -51,6 +51,7 @@ function checkAlphabet(e, c) {
 
     if (c == 'g') {
         document.getElementById(arg).style.backgroundColor = 'green';
+        document.getElementById(arg).style.color = "white";
     }
     else if (c == 'y') {
         document.getElementById(arg).style.backgroundColor = 'yellow';
