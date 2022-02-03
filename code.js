@@ -1,12 +1,9 @@
 let word = "fruit"
 
-function getCount() {
-    return parseInt(document.getElementById("count").innerHTML);
-    
-}
 
 function getWord() {
-    let wordCount = getCount();
+
+    let wordCount = parseInt(document.getElementById("count").innerHTML);
     let uword = [];
 
     // select correct word from HTML
@@ -30,13 +27,14 @@ function getWord() {
             uword = document.getElementsByClassName('f')
             break;
         case 6:
-            alert("Game over. Word was" + word);
+            alert("Game over. Word was " + word);
 
     }
 
     // send each letter to get checked
     for (let [key, name] of Object.entries(uword)) {
         checkLetter(name, key);
+        checkAlphabet(name, key);
     }
 
     // update count
@@ -48,14 +46,30 @@ function getWord() {
 
 }
 
+function checkAlphabet(e, c) {
+    let arg = "_" + e;
+
+    if (c == 'g') {
+        document.getElementById(arg).style.backgroundColor = 'green';
+    }
+    else if (c == 'y') {
+        document.getElementById(arg).style.backgroundColor = 'yellow';
+        document.getElementById(arg).style.color = "black";
+    }
+    
+}
+
 function checkLetter(e,i){
     let ul1 = e.value.toLowerCase();
     let rl1 = word[i].toLowerCase();
     let bool = 0;
     if(ul1 == rl1){
-        e.style.backgroundColor = "green";            
+        e.style.backgroundColor = "green";
+        checkAlphabet(ul1, 'g');
     } else if(word.indexOf(ul1) > -1){
         e.style.backgroundColor = "yellow";
+        e.style.color = "black";
+        checkAlphabet(ul1, 'y');
     } else {
         e.style.backgroundColor = '#444';
     }   

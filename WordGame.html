@@ -5,6 +5,8 @@
     <script src="code.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
+
+    // Auto Skip to next letter
         $(document).ready(function () {
             $(".word").keyup(function () {
                 if (this.value.length == this.maxLength) {
@@ -18,8 +20,39 @@
         });</script>
 </head>
 <body>
-    <h1>Guess Count: <b id="count">0</b></h1>
 
+
+    <!--Display Alphabet-->
+    <div class="lwrapper">
+        <span class="letter" id="_a">A</span>
+        <span class="letter" id="_b">B</span>
+        <span class="letter" id="_c">C</span>
+        <span class="letter" id="_d">D</span>
+        <span class="letter" id="_e">E</span>
+        <span class="letter" id="_f">F</span>
+        <span class="letter" id="_g">G</span>
+        <span class="letter" id="_h">H</span>
+        <span class="letter" id="_i">I</span>
+        <span class="letter" id="_j">J</span>
+        <span class="letter" id="_k">K</span>
+        <span class="letter" id="_l">L</span>
+        <span class="letter" id="_m">M</span>
+        <span class="letter" id="_n">N</span>
+        <span class="letter" id="_o">O</span>
+        <span class="letter" id="_p">P</span>
+        <span class="letter" id="_q">Q</span>
+        <span class="letter" id="_r">R</span>
+        <span class="letter" id="_s">S</span>
+        <span class="letter" id="_t">T</span>
+        <span class="letter" id="_u">U</span>
+        <span class="letter" id="_v">V</span>
+        <span class="letter" id="_w">W</span>
+        <span class="letter" id="_x">X</span>
+        <span class="letter" id="_y">Y</span>
+        <span class="letter" id="_z">Z</span>
+    </div>
+
+    <!--Display Buttons-->
     <div class="wrapper">
         <input type="text" maxlength="1" class="word a" />
         <input type="text" maxlength="1" class="word a" />
@@ -59,6 +92,6 @@
     </div>
 
     <button class="enterBtn" onclick="getWord()">Enter</button>
-
+    <p style="visibility:hidden;" id="count">0</p>
 </body>
 </html>

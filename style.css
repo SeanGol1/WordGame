@@ -18,4 +18,22 @@ body {
     font-size: 150%;
     
   }
+
+.lwrapper {
+    display: grid;
+    grid-template-columns: 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px 20px;
+    grid-gap: 2px;
+    background-color: #fff;
+    color: #444;
+    margin: 20px;
+    padding: 20px;
+}
+
+.letter {
+    background-color: #444;
+    color: #fff;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 70%;
+}
   
